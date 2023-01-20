@@ -11,7 +11,7 @@ export class CiudadService {
 
   constructor(private http: HttpClient) {}
 
-  getCiudad(id: number): Observable<Ciudad[]> {
+  getCiudadPorPais(id: number): Observable<Ciudad[]> {
     return this.http.get<Ciudad[]>(this.API_URL + id + '/ciudad');
   }
 
