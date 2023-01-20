@@ -12,6 +12,7 @@ const routes: Routes = [
     path: 'listado-personas',
     component: ListadoPersonasComponent,
   },
+  { path: 'alta-persona/:id', component: AgregarPersonaComponent },
 ];
 
 @NgModule({

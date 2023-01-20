@@ -4,10 +4,12 @@ import {
   FormBuilder,
   FormControl,
   FormGroup,
+  MinValidator,
   Validators,
 } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
+import { min, Subscription } from 'rxjs';
 import { Ciudad } from 'src/app/models/ciudad/ciudad';
 import { Pais } from 'src/app/models/pais/pais';
 import { Persona } from 'src/app/models/persona/persona';
@@ -29,6 +31,7 @@ export class AgregarPersonaComponent implements OnInit {
   persona: Persona;
 
   habilitado = true;
+  minLength: number;
   private subscription = new Subscription();
 
   constructor(
@@ -37,16 +40,20 @@ export class AgregarPersonaComponent implements OnInit {
     private paisService: PaisService,
     private ciudadService: CiudadService,
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
+    //funciones
+    this.cargarCboPais();
+    this.cargarDatos();
+
     //validaciones del formulario
     this.formulario = this.formBuilder.group({
       nombre: [, Validators.required],
       apellido: [, Validators.required],
       edad: [, Validators.required],
-      precio: [, Validators.required],
       fecha: [, Validators.required],
       paisId: [, Validators.required],
       ciudadId: [, Validators.required],
@@ -65,10 +72,6 @@ export class AgregarPersonaComponent implements OnInit {
         })
       );
     });
-
-    //funciones
-    this.cargarCboPais();
-    this.cargarDatos();
   }
 
   //registrar nueva persona
@@ -77,15 +80,23 @@ export class AgregarPersonaComponent implements OnInit {
       this.subscription.add(
         this.personaService.addPersona(this.formulario.value).subscribe({
           next: (r: Persona) => {
+            this.toastr.success(
+              'Se cargo la persona correctamente!',
+              'Carga exitosa!'
+            );
+
             this.router.navigate(['/listado-personas']);
           },
           error: () => {
-            alert('error al registrar la persona');
+            this.toastr.error('Error al registrar la persona');
           },
         })
       );
     } else {
-      alert('error con la persona, revise e intente nuecvamente');
+      this.toastr.error(
+        'Complete todos los campos e intente nuevamente!',
+        'Error inesperado'
+      );
     }
   }
 
@@ -97,7 +108,10 @@ export class AgregarPersonaComponent implements OnInit {
       this.subscription.add(
         this.personaService.editPersona(body).subscribe({
           next: (r: Persona) => {
-            alert('La persona se edito correctamente');
+            this.toastr.success(
+              'Se edito la persona correctamente!',
+              'Edición exitosa!'
+            );
             this.router.navigate(['/listado-personas']);
           },
           error: () => {
@@ -169,10 +183,6 @@ export class AgregarPersonaComponent implements OnInit {
     return this.formulario.controls['edad'] as FormControl;
   }
 
-  get controlPrecio(): FormControl {
-    return this.formulario.controls['precio'] as FormControl;
-  }
-
   get controlFecha(): FormControl {
     return this.formulario.controls['fecha'] as FormControl;
   }
@@ -183,5 +193,9 @@ export class AgregarPersonaComponent implements OnInit {
 
   get controlCiudad(): FormControl {
     return this.formulario.controls['ciudadId'] as FormControl;
+  }
+
+  get controlPrecio(): FormControl {
+    return this.formulario.controls['precio'] as FormControl;
   }
 }

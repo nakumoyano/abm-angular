@@ -13,6 +13,9 @@ import { AgregarCiudadComponent } from './page/ciudad/agregar-ciudad/agregar-ciu
 import { ListadoCiudadesComponent } from './page/ciudad/listado-ciudades/listado-ciudades.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot({
+      timeOut: 3000,
+    }), // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent],
