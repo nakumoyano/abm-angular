@@ -46,6 +46,7 @@
 - [![Angular][angular.io]][angular-url]
 - [![Bootstrap][bootstrap.com]][bootstrap-url]
 - [![CSS3][css3]][css3-url]
+- [![HTML5][html.com]][html-url]
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
