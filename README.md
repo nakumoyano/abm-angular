@@ -39,10 +39,14 @@
             error al momento de relaizar dicha acción.
           </p>
 
+## Tecnologías usadas
+
 - [![Angular][angular.io]][angular-url]
+- [![RESTAPI][restapi.com]][restapi-url]
 - [![Bootstrap][bootstrap.com]][bootstrap-url]
 - [![CSS3][css3]][css3-url]
 - [![HTML5][html.com]][html-url]
+- [![NPM][npm.com]][npm-url]
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
@@ -56,3 +60,7 @@
 [css3-url]: https://www.w3schools.com/css/
 [html-url]: https://developer.mozilla.org/es/docs/Web/HTML
 [html.com]: https://img.shields.io/badge/Html-orange?style=for-the-badge&logo=html5&logoColor=white
+[restapi-url]: https://www.redhat.com/es/topics/api/what-is-a-rest-api
+[restapi.com]: https://img.shields.io/badge/RestApi-green?style=for-the-badge&logo=restapi&logoColor=white
+[npm-url]: https://www.npmjs.com/
+[npm.com]: https://img.shields.io/badge/NPM-white?style=for-the-badge&logo=npm&logoColor=white
