@@ -1,1 +1,31 @@
-<p>agregar-pais works!</p>
+<form class="formulario" [formGroup]="formulario">
+  <h2 class="my-3">Alta País</h2>
+  <hr class="hr" />
+  <div class="col-12 d-flex gap-2">
+    <div class="mb-3 col-lg-6 col-md-6">
+      <label for="nombre" class="form-label"
+        >Nombre <span class="text-danger fw-bold">*</span></label
+      >
+      <input
+        type="text"
+        class="form-control mb-2"
+        id="nombre"
+        formControlName="nombre"
+        [class.is-invalid]="
+          controlNombre.touched && controlNombre.hasError('required')
+        "
+      />
+      <small
+        *ngIf="controlNombre.touched && controlNombre.hasError('required')"
+        class="alert alert-danger px-2 py-1"
+      >
+        Nombre es requerido
+      </small>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-success mb-3" *ngIf="!isEdit">
+    Agregar
+  </button>
+  <button type="submit" class="btn btn-primary" *ngIf="isEdit">Editar</button>
+</form>

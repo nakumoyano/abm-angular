@@ -1,0 +1,32 @@
+.title-project {
+  text-decoration: underline;
+}
+
+.img-tecnologias {
+  width: 100% !important;
+  height: 65px;
+
+  border-radius: 50%;
+  align-items: center;
+  display: flex;
+  margin: auto;
+}
+
+.text-tecnologias {
+  font-size: 15px;
+  align-items: center;
+  padding: 0;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+}
+
+a {
+  margin: 0;
+  width: 100%;
+  text-decoration: none;
+}
+
+.text-tecnologias:hover {
+  color: rgb(158, 156, 156);
+}
