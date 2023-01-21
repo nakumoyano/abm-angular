@@ -66,4 +66,4 @@
 [npm.com]: https://img.shields.io/badge/NPM-red?style=for-the-badge&logo=npm&logoColor=white
 
 [vscode-url]: https://code.visualstudio.com/
-[vscode.com]: https://img.shields.io/badge/VSCode-563D7C?style=for-the-badge&logo=vscode&logoColor=white
+[vscode.com]: https://img.shields.io/badge/vscode-33C4FF?style=for-the-badge&logo=vscode&logoColor=white
