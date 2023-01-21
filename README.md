@@ -65,4 +65,4 @@
 [mysql]: https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white
 [mysql-url]: https://www.mysql.com/
 [html-url]: https://developer.mozilla.org/es/docs/Web/HTML
-[html.com]: https://www.ujudebug.com/wp-content/uploads/2022/07/html-logo-transparent.png
+[html.com]: https://img.shields.io/badge/Html-563D7C?style=for-the-badge&logo=html5&logoColor=white
