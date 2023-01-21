@@ -47,7 +47,7 @@
 - [![CSS3][css3]][css3-url]
 - [![HTML5][html.com]][html-url]
 - [![NPM][npm.com]][npm-url]
-
+- [![Typescript][typescript.com]][typescript-url]
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
@@ -63,4 +63,7 @@
 [restapi-url]: https://www.redhat.com/es/topics/api/what-is-a-rest-api
 [restapi.com]: https://img.shields.io/badge/RestApi-green?style=for-the-badge&logo=restapi&logoColor=white
 [npm-url]: https://www.npmjs.com/
-[npm.com]: https://img.shields.io/badge/NPM-white?style=for-the-badge&logo=npm&logoColor=white
+[npm.com]: https://img.shields.io/badge/Npm-white?style=for-the-badge&logo=npm&logoColor=white
+
+[typescript-url]:https://www.typescriptlang.org/
+[typescript.com]:https://img.shields.io/badge/Typescript-33C4FF?style=for-the-badge&logo=typescript&logoColor=white
