@@ -33,10 +33,9 @@
             persona, pais o ciudad que hemos elegio.
           </p>
           <p>
-            Cada vez que realizamos una carga, modificacion o decidimos borrar
-            permanentemente un dato, saldra una notificacion emergente
+            Cada vez que realizamos una acción con respecto a un dato, saldra una notificacion emergente
             diciendonos si se ha realizado con exito o si a ocurrido algun
-            error.
+            error al momento de relaizar dicha acción.
           </p>
 ### Construido con
 
