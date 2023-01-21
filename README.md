@@ -1,6 +1,198 @@
+<a name="readme-top"></a>
+
+# BlackJack - DABD
+
+## Integrantes:
+
+- 113231 - Barrera Dominici, Juan Cruz
+- 112733 - Gimenez, Joaquin
+- 112962 - Gonzalo, Nicolas
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Tabla de contenidos</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">Acerca del proyecto</a>
+      <ul>
+        <li><a href="#built-with">Construido con</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Empecemos</a>
+      <ul>
+        <li><a href="#prerequisites">Pre-Requisitos</a></li>
+        <li><a href="#installation">Instalación</a></li>        
+      </ul>
+    </li>
+    <li><a href="#usage">Uso</a></li>
+    <li><a href="#contact">Contactos</a></li>
+
+  </ol>
+</details>
+
+<a name="about-the-project"></a>
+
+<!-- ABOUT THE PROJECT -->
+
+## Acerca del proyecto
+
+Se trata de un simple blackjack, modalidad de un solo jugador, contra un NPC que hace las veces de crupier.
+Este juego tiene como características, empezar una nueva partida, pedir cartas, pasar y resolver partidas, todo persistiendo los datos y posibilitando con esto, retomar partidas sin finalizar.
+
+El proyecto forma parte de la materia DABD de la UTN-FRC (Cordoba - Argentina), y está a cargo del profesor **Serrano, Javier.**
+
+<p align="right">(<a href="#readme-top">volver arriba</a>)</p>
+
+<a name="built-with"></a>
+
+### Construido con
+
 - [![Angular][angular.io]][angular-url]
 - [![Bootstrap][bootstrap.com]][bootstrap-url]
 - [![CSS3][css3]][jquery-url]
 - [![JWT][jwt]][jwt-url]
 - [![SPRING][spring]][spring-url]
 - [![MYSQL][mysql]][mysql-url]
+
+<p align="right">(<a href="#readme-top">volver arriba</a>)</p>
+
+<!-- GETTING STARTED -->
+
+<a name="getting-started"></a>
+
+## Empecemos
+
+A continuación detallaremos como inicializar el proyecto de manera local, en futuras entregas puede que lo hostiemos para evitarles molestias.
+<a name="prerequisites"></a>
+
+### Pre-Requisitos
+
+Esta es una lista de frameworks que deberá tener instalados para inicializar el proyecto Angular.
+
+**Windows**
+
+1. Entrar en https://nodejs.org/es/download/ y descargar el instalador de Node.js en el sistema operativo deseado. Podemos elegir entre Windows, Mac y Linux.
+
+2. Ejecutar el instalador que acabamos de descargar. Simplemente debemos avanzar en el proceso de instalación.
+
+3. Una vez finalizado el proceso de instalación, podemos comprobar fácilmente si se nos ha instalado correctamente. Para ello, vamos al intérprete de comandos de nuestro ordenador (en Windows, por ejemplo, escribir “cmd” en la barra de búsqueda y abrir la aplicación de “Símbolo del sistema”).
+
+4. En la ventana de comandos, escribir node -v y pulsar la tecla Enter. Nos debería aparecer la versión que tenemos instalada de Node.js. Para comprobar que se nos ha instalado también NPM, escribiremos npm -v y pulsaremos de nuevo Enter. Nos debería aparecer también en este caso la versión del Node Package Manager.
+
+5. Instalamos Angular desde CMD:
+   ```sh
+   npm install @angular/cli
+   ```
+
+**Ubuntu**
+
+1. Antes de nada vamos a tener que asegurarnos de que todos los paquetes de nuestro sistema estén actualizados. Para hacerlo solo habrá que abrir una terminal (Ctrl+Alt+T) y ejecutar la siguiente secuencia de comandos:
+   ```sh
+   sudo apt update; sudo apt upgrade
+   ```
+2. Antes de proceder a la instalación de Angular en Ubuntu 18.04, vamos a tener que instalar NodeJs y Node Package Manager (NPM). Para hacerlo en la misma terminal ejecutaremos las siguientes líneas:
+
+   ```sh
+   curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+   ```
+
+   ```sh
+   sudo apt-get install -y nodejs
+   ```
+
+3. Tras finalizar la instalación de NodeJs procedemos a la instalación de NPM:
+   ```sh
+
+    sudo npm install npm@latest -g
+   ```
+4. Ahora instalaremos la CLI angular usando NPM:
+   ```sh
+
+    sudo npm install -g @angular/cli
+   ```
+
+### Instalacion
+
+<a name="installation"></a>
+
+1. Clona el repo
+   ```sh
+   git clone https://github.com/JoaquinGimenez-112733/BlackJack.git
+   ```
+2. Necesitas crear la base de datos en MySQL, para ello:
+   2.1. Abrir algun editor de scripts-sql, como MySQL Workbench o DBeaver en donde tengas una conexion hecha al localhost:3306, y crear una base de datos:
+   ```sh
+   CREATE DATABASE BlackJack;
+   ```
+   2.2. Selecciona la base de datos recien creada y ejecuta el script que está adjunto en nuestro repo: https://github.com/JoaquinGimenez-112733/BlackJack/blob/main/back/sql-scripts/tablas.sql
+   2.3. En nuestro repo clonado, cambiaremos las credenciales de nuestro proyecto, por las tuyas en `BlackJackController.java` en el método `abrirConexion`:
+   ```sh
+   conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/BlackJack", "claselab4", "123456");
+   ```
+   En el segundo y tercer argumento, donde dice `claselab4` y `123456` insertaremos nuestro usuario y password de nuestra instancia de MySQL.
+3. Instalar las dependencias, tanto para el proyecto Angular, como para el proyecto maven.
+   3.1. Desde el directorio del proyecto **Angular**, instalar las dependencias:
+
+```sh
+    npm install
+```
+
+<p align="right">(<a href="#readme-top">volver arriba</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+
+<a name="usage"></a>
+
+## Uso
+
+Para poder usarlo, se debe abrir el proyecto maven desde algun IDE como `netbeans`, y en la terminal ejecutar
+
+```sh
+    mvn spring-boot:run
+```
+
+Esto correra el BACK-END en el `localhost:8080`.
+Luego desde el directorio de nuestro proyecto Angular, ejecutar con:
+
+```sh
+    ng serve
+```
+
+Se abrira en una pestaña de su navegador por defecto el proyecto en `localhost:4200` y ya desde ahi podra logearse o crear un usuario nuevo.
+
+<p align="right">(<a href="#readme-top">volver arriba</a>)</p>
+
+<!-- CONTACT -->
+
+<a name="contacts"></a>
+
+## Contactos
+
+Gonzalo, Nicolas - 112962@tecnicatura.frc.utn.edu.ar
+
+Barrera Dominici, Juan Cruz - 113231@tecnicatura.frc.utn.edu.ar
+
+Gimenez, Joaquin - 112733@tecnicatura.frc.utn.edu.ar
+
+<p align="right">(<a href="#readme-top">volver arriba</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/linkedin_username
+[angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[angular-url]: https://angular.io/
+[bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[bootstrap-url]: https://getbootstrap.com
+[jquery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[jquery-url]: https://jquery.com
+[css3]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
+[css3-url]: https://www.w3schools.com/css/
+[jwt]: https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens
+[jwt-url]: https://jwt.io/
+[spring]: https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white
+[spring-url]: https://spring.io/
+[mysql]: https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white
+[mysql-url]: https://www.mysql.com/
