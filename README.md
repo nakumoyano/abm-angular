@@ -63,6 +63,6 @@
 [restapi-url]: https://www.redhat.com/es/topics/api/what-is-a-rest-api
 [restapi.com]: https://img.shields.io/badge/RestApi-green?style=for-the-badge&logo=restapi&logoColor=white
 [npm-url]: https://www.npmjs.com/
-[npm.com]: https://img.shields.io/badge/NPM-white?style=for-the-badge&logo=npm&logoColor=white
+[npm.com]: https://img.shields.io/badge/NPM-red?style=for-the-badge&logo=npm&logoColor=white
 
 
