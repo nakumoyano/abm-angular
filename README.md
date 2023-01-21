@@ -42,20 +42,19 @@
 ## Tecnologías usadas
 
 - [![Angular][angular.io]][angular-url]
+- [![Typescript][typescript.com]][typescript-url]
 - [![RESTAPI][restapi.com]][restapi-url]
 - [![Bootstrap][bootstrap.com]][bootstrap-url]
 - [![CSS3][css3]][css3-url]
 - [![HTML5][html.com]][html-url]
 - [![NPM][npm.com]][npm-url]
+- [![GitHub][github.com]][github-url]
+- [![VSCode][vscode.com]][vscode-url]
 
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
 [angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [angular-url]: https://angular.io/
 [bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [bootstrap-url]: https://getbootstrap.com
-[jquery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[jquery-url]: https://jquery.com
 [css3]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
 [css3-url]: https://www.w3schools.com/css/
 [html-url]: https://developer.mozilla.org/es/docs/Web/HTML
@@ -63,4 +62,10 @@
 [restapi-url]: https://www.redhat.com/es/topics/api/what-is-a-rest-api
 [restapi.com]: https://img.shields.io/badge/RestApi-green?style=for-the-badge&logo=restapi&logoColor=white
 [npm-url]: https://www.npmjs.com/
-[npm.com]: https://img.shields.io/badge/NPM-white?style=for-the-badge&logo=npm&logoColor=white
+[npm.com]: https://img.shields.io/badge/Npm-red?style=for-the-badge&logo=npm&logoColor=white
+[typescript-url]: https://www.typescriptlang.org/
+[typescript.com]: https://img.shields.io/badge/Typescript-33C4FF?style=for-the-badge&logo=typescript&logoColor=white
+[github-url]: https://docs.github.com/es
+[github.com]: https://img.shields.io/badge/Github-563D7C?style=for-the-badge&logo=github&logoColor=white
+[vscode-url]: https://code.visualstudio.com/
+[vscode.com]: https://img.shields.io/badge/vscode-33C4FF?style=for-the-badge&logo=vscode&logoColor=white
