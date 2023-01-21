@@ -2,16 +2,11 @@
 
 # ABM - ANGULAR
 
-## Acerca del proyecto
-
-### Construido con
+### Tecnologías utilizadas
 
 - [![Angular][angular.io]][angular-url]
 - [![Bootstrap][bootstrap.com]][bootstrap-url]
-- [![CSS3][css3]][jquery-url]
-- [![JWT][jwt]][jwt-url]
-- [![SPRING][spring]][spring-url]
-- [![MYSQL][mysql]][mysql-url]
+- [![CSS3][css3]][css3-url]
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
@@ -29,3 +24,5 @@
 [spring-url]: https://spring.io/
 [mysql]: https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white
 [mysql-url]: https://www.mysql.com/
+[html-url]: https://developer.mozilla.org/es/docs/Web/HTML
+[html.com]: https://www.ujudebug.com/wp-content/uploads/2022/07/html-logo-transparent.png
