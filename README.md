@@ -47,7 +47,8 @@
 - [![CSS3][css3]][css3-url]
 - [![HTML5][html.com]][html-url]
 - [![NPM][npm.com]][npm-url]
-
+- [![GitHub][github.com]][github-url]
+- 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
@@ -65,3 +66,5 @@
 [npm-url]: https://www.npmjs.com/
 [npm.com]: https://img.shields.io/badge/NPM-white?style=for-the-badge&logo=npm&logoColor=white
 
+[github-url]:https://docs.github.com/es
+[github.com]:https://img.shields.io/badge/GitHub-violet?style=for-the-badge&logo=github&logoColor=white
