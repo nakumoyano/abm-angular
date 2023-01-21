@@ -2,10 +2,8 @@
 
 # ABM - ANGULAR
 
-<<<<<<< HEAD
-### Tecnologías utilizadas
-=======
 ## Acerca del proyecto
+
 <p>
             El proyecto consta en un
             <strong>ABM (Alta - Baja - Modificación)</strong> de personas. De
@@ -40,8 +38,6 @@
             diciendonos si se ha realizado con exito o si a ocurrido algun
             error al momento de relaizar dicha acción.
           </p>
-### Construido con
->>>>>>> 3ca741174b97706166f1296c84753752d667c7a8
 
 - [![Angular][angular.io]][angular-url]
 - [![Bootstrap][bootstrap.com]][bootstrap-url]
@@ -58,11 +54,5 @@
 [jquery-url]: https://jquery.com
 [css3]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
 [css3-url]: https://www.w3schools.com/css/
-[jwt]: https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens
-[jwt-url]: https://jwt.io/
-[spring]: https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white
-[spring-url]: https://spring.io/
-[mysql]: https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white
-[mysql-url]: https://www.mysql.com/
 [html-url]: https://developer.mozilla.org/es/docs/Web/HTML
-[html.com]: https://www.ujudebug.com/wp-content/uploads/2022/07/html-logo-transparent.png
+[html.com]: https://img.shields.io/badge/Html-orange?style=for-the-badge&logo=html5&logoColor=white
