@@ -58,7 +58,7 @@
 [css3]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
 [css3-url]: https://www.w3schools.com/css/
 [html-url]: https://developer.mozilla.org/es/docs/Web/HTML
-[html.com]: https://img.shields.io/badge/Html-orange?style=for-the-badge&logo=html5&logoColor=white
+[html.com]: https://img.shields.io/badge/Html5-orange?style=for-the-badge&logo=html5&logoColor=white
 [restapi-url]: https://www.redhat.com/es/topics/api/what-is-a-rest-api
 [restapi.com]: https://img.shields.io/badge/RestApi-green?style=for-the-badge&logo=restapi&logoColor=white
 [npm-url]: https://www.npmjs.com/
