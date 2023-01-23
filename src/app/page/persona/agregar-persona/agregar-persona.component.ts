@@ -31,7 +31,7 @@ export class AgregarPersonaComponent implements OnInit {
   persona: Persona;
 
   habilitado = true;
-  minLength: number;
+
   private subscription = new Subscription();
 
   constructor(
@@ -59,7 +59,7 @@ export class AgregarPersonaComponent implements OnInit {
       ciudadId: [, Validators.required],
     });
 
-    //elegir primero el combo de pais para que se active el de ciudades
+    //hace que primero elijamos el pais y luego aparece la ciudad
     this.formulario.controls['paisId'].valueChanges.subscribe((x) => {
       this.subscription.add(
         this.ciudadService.getCiudadPorPais(x).subscribe({
@@ -67,7 +67,7 @@ export class AgregarPersonaComponent implements OnInit {
             this.ciudades = r;
           },
           error: () => {
-            alert('error al cargar ciudades');
+            alert('error al cargar combo ciudad');
           },
         })
       );
@@ -155,20 +155,20 @@ export class AgregarPersonaComponent implements OnInit {
   }
 
   //cargamos el combo de ciudad segun el pais que elijamos
-  cargarCiudadPorPais() {
-    this.formulario.controls['paisId'].valueChanges.subscribe((x) => {
-      this.subscription.add(
-        this.ciudadService.getCiudadPorPais(x).subscribe({
-          next: (r: Ciudad[]) => {
-            this.ciudades = r;
-          },
-          error: () => {
-            alert('error al cargar combo ciudad');
-          },
-        })
-      );
-    });
-  }
+  // cargarCiudadPorPais() {
+  //   this.formulario.controls['paisId'].valueChanges.subscribe((x) => {
+  //     this.subscription.add(
+  //       this.ciudadService.getCiudadPorPais(x).subscribe({
+  //         next: (r: Ciudad[]) => {
+  //           this.ciudades = r;
+  //         },
+  //         error: () => {
+  //           alert('error al cargar combo ciudad');
+  //         },
+  //       })
+  //     );
+  //   });
+  // }
 
   //para las validaciones del formulario
   get controlNombre(): FormControl {

@@ -1,5 +1,6 @@
 <form class="formulario" [formGroup]="formulario">
-  <h2 class="my-3">Alta País</h2>
+  <h2 class="my-3" *ngIf="!isEdit">Alta País</h2>
+  <h2 class="my-3" *ngIf="isEdit">Editar País</h2>
   <hr class="hr" />
   <div class="col-12 d-flex gap-2">
     <div class="mb-3 col-lg-6 col-md-6">
@@ -14,6 +15,9 @@
         [class.is-invalid]="
           controlNombre.touched && controlNombre.hasError('required')
         "
+        [class.is-invalid]="
+          controlNombre.touched && controlNombre.hasError('nameAlReadyExists')
+        "
       />
       <small
         *ngIf="controlNombre.touched && controlNombre.hasError('required')"
@@ -21,11 +25,31 @@
       >
         Nombre es requerido
       </small>
+      <small
+        *ngIf="
+          controlNombre.touched && controlNombre.hasError('nameAlReadyExists')
+        "
+        class="alert alert-danger px-2 py-1"
+      >
+        Este país ya existe
+      </small>
     </div>
   </div>
 
-  <button type="submit" class="btn btn-success mb-3" *ngIf="!isEdit">
+  <button
+    type="submit"
+    class="btn btn-success mb-3"
+    *ngIf="!isEdit"
+    (click)="guardar()"
+  >
     Agregar
   </button>
-  <button type="submit" class="btn btn-primary" *ngIf="isEdit">Editar</button>
+  <button
+    type="submit"
+    class="btn btn-primary mb-3"
+    *ngIf="isEdit"
+    (click)="editar()"
+  >
+    Editar
+  </button>
 </form>

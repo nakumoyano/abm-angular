@@ -1,137 +1,142 @@
 <form class="formulario" [formGroup]="formulario">
-  <h2 class="my-3">Alta Persona</h2>
+  <h2 class="my-3" *ngIf="!isEdit">Alta Persona</h2>
+  <h2 class="my-3" *ngIf="isEdit">Editar Persona</h2>
   <hr class="hr" />
-  <div class="col-12 d-flex gap-2">
-    <div class="mb-3 col-lg-6 col-md-6">
-      <label for="nombre" class="form-label"
-        >Nombre <span class="text-danger fw-bold">*</span></label
-      >
-      <input
-        type="text"
-        class="form-control mb-2"
-        id="nombre"
-        formControlName="nombre"
-        [class.is-invalid]="
-          controlNombre.touched && controlNombre.hasError('required')
-        "
-      />
-      <small
-        *ngIf="controlNombre.touched && controlNombre.hasError('required')"
-        class="alert alert-danger px-2 py-1"
-      >
-        Nombre es requerido
-      </small>
+  <div class="">
+    <div class="row d-flex gap-2">
+      <div class="mb-3 col-sm-12 col-lg-6">
+        <label for="nombre" class="form-label"
+          >Nombre <span class="text-danger fw-bold">*</span></label
+        >
+        <input
+          type="text"
+          class="form-control mb-2"
+          id="nombre"
+          formControlName="nombre"
+          [class.is-invalid]="
+            controlNombre.touched && controlNombre.hasError('required')
+          "
+        />
+        <small
+          *ngIf="controlNombre.touched && controlNombre.hasError('required')"
+          class="alert alert-danger px-2 py-1"
+        >
+          Nombre es requerido
+        </small>
+      </div>
+      <div class="mb-3 col">
+        <label for="apellido" class="form-label"
+          >Apellido <span class="text-danger fw-bold">*</span></label
+        >
+        <input
+          type="text"
+          class="form-control mb-2"
+          formControlName="apellido"
+          id="apellido"
+          [class.is-invalid]="
+            controlApellido.touched && controlApellido.hasError('required')
+          "
+        />
+        <small
+          *ngIf="
+            controlApellido.touched && controlApellido.hasError('required')
+          "
+          class="alert alert-danger px-2 py-1"
+        >
+          Apellido es requerido
+        </small>
+      </div>
     </div>
-    <div class="mb-3 col-lg-6">
-      <label for="apellido" class="form-label"
-        >Apellido <span class="text-danger fw-bold">*</span></label
-      >
-      <input
-        type="text"
-        class="form-control mb-2"
-        formControlName="apellido"
-        id="apellido"
-        [class.is-invalid]="
-          controlApellido.touched && controlApellido.hasError('required')
-        "
-      />
-      <small
-        *ngIf="controlApellido.touched && controlApellido.hasError('required')"
-        class="alert alert-danger px-2 py-1"
-      >
-        Apellido es requerido
-      </small>
+    <div class="row d-flex gap-2">
+      <div class="mb-3 col-sm-12 col-lg-6">
+        <label for="edad" class="form-label"
+          >Edad <span class="text-danger fw-bold">*</span></label
+        >
+        <input
+          type="number"
+          class="form-control mb-2"
+          id="edad"
+          formControlName="edad"
+          aria-describedby="emailHelp"
+          [class.is-invalid]="
+            controlEdad.touched && controlEdad.hasError('required')
+          "
+        />
+        <small
+          *ngIf="controlEdad.touched && controlEdad.hasError('required')"
+          class="alert alert-danger px-2 py-1"
+        >
+          Edad es requerido
+        </small>
+      </div>
+      <div class="col">
+        <label for="fecha" class="form-label"
+          >Fecha de nacimiento<span class="text-danger fw-bold">*</span></label
+        >
+        <input
+          type="date"
+          class="form-control mb-2"
+          id="fecha"
+          formControlName="fecha"
+          [class.is-invalid]="
+            controlFecha.touched && controlFecha.hasError('required')
+          "
+        />
+        <small
+          *ngIf="controlFecha.touched && controlFecha.hasError('required')"
+          class="alert alert-danger px-2 py-1"
+        >
+          Fecha es requerido
+        </small>
+      </div>
     </div>
-  </div>
-  <div class="col-12 d-flex gap-2">
-    <div class="mb-3 col-lg-6">
-      <label for="edad" class="form-label"
-        >Edad <span class="text-danger fw-bold">*</span></label
-      >
-      <input
-        type="number"
-        class="form-control mb-2"
-        id="edad"
-        formControlName="edad"
-        aria-describedby="emailHelp"
-        [class.is-invalid]="
-          controlEdad.touched && controlEdad.hasError('required')
-        "
-      />
-      <small
-        *ngIf="controlEdad.touched && controlEdad.hasError('required')"
-        class="alert alert-danger px-2 py-1"
-      >
-        Edad es requerido
-      </small>
-    </div>
-    <div class="col-lg-6">
-      <label for="fecha" class="form-label"
-        >Fecha de nacimiento<span class="text-danger fw-bold">*</span></label
-      >
-      <input
-        type="date"
-        class="form-control mb-2"
-        id="fecha"
-        formControlName="fecha"
-        [class.is-invalid]="
-          controlFecha.touched && controlFecha.hasError('required')
-        "
-      />
-      <small
-        *ngIf="controlFecha.touched && controlFecha.hasError('required')"
-        class="alert alert-danger px-2 py-1"
-      >
-        Fecha es requerido
-      </small>
-    </div>
-  </div>
-  <div class="col-12 d-flex gap-2">
-    <div class="col-lg-6">
-      <label for="inputPais" class="form-label"
-        >Pais <span class="text-danger fw-bold">*</span></label
-      >
-      <select
-        id="inputPais"
-        class="form-select mb-2"
-        formControlName="paisId"
-        [class.is-invalid]="
-          controlPais.touched && controlPais.hasError('required')
-        "
-      >
-        <option *ngFor="let p of paises" [value]="p.id">
-          {{ p.nombre }}
-        </option>
-      </select>
-      <small
-        *ngIf="controlPais.touched && controlPais.hasError('required')"
-        class="alert alert-danger px-2 py-1"
-      >
-        Seleccione un país
-      </small>
-    </div>
-    <div class="col-lg-6">
-      <label for="inputCiudad" class="form-label"
-        >Ciudad <span class="text-danger fw-bold">*</span></label
-      >
-      <select
-        id="inputCiudad"
-        class="form-select mb-2"
-        formControlName="ciudadId"
-        [class.is-invalid]="
-          controlCiudad.touched && controlCiudad.hasError('required')
-        "
-      >
-        <option *ngFor="let c of ciudades" [value]="c.id">
-          {{ c.nombre }}
-        </option>
-      </select>
-      <small
-        *ngIf="controlCiudad.touched && controlCiudad.hasError('required')"
-        class="alert alert-danger px-2 py-1"
-      >
-        Seleccione una ciudad
-      </small>
+    <div class="row d-flex gap-2">
+      <div class="col-sm-12 col-lg-6">
+        <label for="inputPais" class="form-label"
+          >Pais <span class="text-danger fw-bold">*</span></label
+        >
+        <select
+          id="inputPais"
+          class="form-select mb-2"
+          formControlName="paisId"
+          [class.is-invalid]="
+            controlPais.touched && controlPais.hasError('required')
+          "
+        >
+          <option *ngFor="let p of paises" [value]="p.id">
+            {{ p.nombre }}
+          </option>
+        </select>
+        <small
+          *ngIf="controlPais.touched && controlPais.hasError('required')"
+          class="alert alert-danger px-2 py-1"
+        >
+          Seleccione un país
+        </small>
+      </div>
+      <div class="col">
+        <label for="inputCiudad" class="form-label"
+          >Ciudad <span class="text-danger fw-bold">*</span></label
+        >
+        <select
+          id="inputCiudad"
+          class="form-select mb-2"
+          formControlName="ciudadId"
+          [class.is-invalid]="
+            controlCiudad.touched && controlCiudad.hasError('required')
+          "
+        >
+          <option *ngFor="let c of ciudades" [value]="c.id">
+            {{ c.nombre }}
+          </option>
+        </select>
+        <small
+          *ngIf="controlCiudad.touched && controlCiudad.hasError('required')"
+          class="alert alert-danger px-2 py-1"
+        >
+          Seleccione una ciudad
+        </small>
+      </div>
     </div>
   </div>
 

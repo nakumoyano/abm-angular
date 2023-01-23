@@ -1,1 +1,28 @@
-<p>listado-paises works!</p>
+<div class="container my-3 row col-lg-12 col-sm-6">
+  <table class="table table-striped col">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of listado">
+        <td>{{ p.nombre }}</td>
+
+        <td>
+          <button class="btn btn-success" [routerLink]="['/editar-pais', p.id]">
+            Editar
+          </button>
+        </td>
+        <td>
+          <app-eliminar-pais
+            [pais]="p"
+            (onEliminado)="actualizarListado()"
+          ></app-eliminar-pais>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

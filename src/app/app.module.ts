@@ -17,6 +17,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 import { HeroComponent } from './page/hero/hero.component';
+import { PaisValidatorDirective } from './validators/pais-validator.directive';
+import { EliminarPaisComponent } from './page/pais/eliminar-pais/eliminar-pais.component';
+import { EliminarPersonaComponent } from './page/persona/eliminar-persona/eliminar-persona.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { HeroComponent } from './page/hero/hero.component';
     AgregarCiudadComponent,
     ListadoCiudadesComponent,
     HeroComponent,
+    PaisValidatorDirective,
+    EliminarPaisComponent,
+    EliminarPersonaComponent,
   ],
   imports: [
     BrowserModule,

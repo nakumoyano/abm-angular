@@ -35,9 +35,10 @@
           </p>
           <p>
             Cada vez que realizamos una acción con respecto a un dato, saldra una notificacion emergente
-            diciendonos si se ha realizado con exito o si a ocurrido algun
-            error al momento de relaizar dicha acción.
+            diciendonos si se ha realizado con éxito o si a ocurrido algun
+            error al momento de realizar dicha acción. 
           </p>
+          <p>Todos los formularios fueron validados utilizando <strong>ReactiveFormsModule</strong>.</p>
 
 ## Tecnologías usadas
 

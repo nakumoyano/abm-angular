@@ -1,5 +1,5 @@
-<div class="container my-3">
-  <table class="table table-striped">
+<div class="container my-3 row col-lg-12 col-sm-6">
+  <table class="table table-striped col">
     <thead>
       <tr>
         <th scope="col">Nombre</th>
@@ -19,7 +19,7 @@
         <td>{{ p.nombre }}</td>
         <td>{{ p.apellido }}</td>
         <td>{{ p?.pais?.nombre }}</td>
-        <td>{{ p?.ciudad?.nombre }}</td>
+        <td>{{ p?.ciudad }}</td>
         <td>{{ p.edad }}</td>
         <td>{{ p.fecha }}</td>
 
@@ -34,6 +34,12 @@
         <!-- <td>
                 <app-baja [persona]="p" (click)="actualizarListado()"></app-baja>
             </td> -->
+        <td>
+          <app-eliminar-persona
+            [persona]="p"
+            (click)="actualizarListado()"
+          ></app-eliminar-persona>
+        </td>
       </tr>
     </tbody>
   </table>
