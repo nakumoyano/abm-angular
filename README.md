@@ -48,8 +48,7 @@
 - [![HTML5][html.com]][html-url]
 - [![NPM][npm.com]][npm-url]
 - [![GitHub][github.com]][github-url]
-- [![VSCode][vscode.com]][vscode-url]
-  -[![Toastr][toastr.com]]
+- [![VSCode][vscode.com]][vscode-url] -[![Toastr][toastr.com]][toastr-url]
 
 [angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [angular-url]: https://angular.io/
@@ -69,4 +68,5 @@
 [github.com]: https://img.shields.io/badge/Github-563D7C?style=for-the-badge&logo=github&logoColor=white
 [vscode-url]: https://code.visualstudio.com/
 [vscode.com]: https://img.shields.io/badge/vscode-33C4FF?style=for-the-badge&logo=vscode&logoColor=white
-[toastr.com]: https://misovirtual.virtual.uniandes.edu.co/codelabs/angular-in-memory/index.html?index=..%2F..index#3
+[toastr-url]: https://misovirtual.virtual.uniandes.edu.co/codelabs/angular-in-memory/index.html?index=..%2F..index#3
+[toastr.com]: https://img.shields.io/badge/Toastr-DD0031?style=for-the-badge&logo=toastr&logoColor=white
