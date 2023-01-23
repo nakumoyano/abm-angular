@@ -1,1 +1,72 @@
-<p>agregar-ciudad works!</p>
+<form class="formulario" [formGroup]="formulario">
+  <h2 class="my-3" *ngIf="!isEdit">Alta Ciudad</h2>
+  <h2 class="my-3" *ngIf="isEdit">Editar Ciudad</h2>
+  <hr class="hr" />
+  <div class="">
+    <div class="row d-flex gap-2">
+      <div class="mb-3 col-sm-12 col-lg-6">
+        <label for="nombre" class="form-label"
+          >Nombre <span class="text-danger fw-bold">*</span></label
+        >
+        <input
+          type="text"
+          class="form-control mb-2"
+          id="nombre"
+          formControlName="nombre"
+          [class.is-invalid]="
+            controlNombre.touched && controlNombre.hasError('required')
+          "
+          [class.is-invalid]="
+            controlNombre.touched && controlNombre.hasError('nameAlReadyExists')
+          "
+        />
+        <small
+          *ngIf="controlNombre.touched && controlNombre.hasError('required')"
+          class="alert alert-danger px-2 py-1"
+        >
+          Nombre es requerido
+        </small>
+        <small
+          *ngIf="
+            controlNombre.touched && controlNombre.hasError('nameAlReadyExists')
+          "
+          class="alert alert-danger px-2 py-1"
+        >
+          Esta ciudad ya existe
+        </small>
+      </div>
+      <div class="mb-3 col">
+        <label for="apellido" class="form-label"
+          >Pais <span class="text-danger fw-bold">*</span></label
+        >
+        <select
+          id="inputPais"
+          class="form-select mb-2"
+          formControlName="paisId"
+          [class.is-invalid]="
+            controlPais.touched && controlPais.hasError('required')
+          "
+        >
+          <option *ngFor="let p of paises" [value]="p.id">
+            {{ p.nombre }}
+          </option>
+        </select>
+        <small
+          *ngIf="controlPais.touched && controlPais.hasError('required')"
+          class="alert alert-danger px-2 py-1"
+        >
+          Seleccione un país
+        </small>
+      </div>
+    </div>
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-success mb-3"
+    *ngIf="!isEdit"
+    (click)="guardar()"
+  >
+    Agregar
+  </button>
+</form>

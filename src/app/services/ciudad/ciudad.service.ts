@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Ciudad } from 'src/app/models/ciudad/ciudad';
 
 @Injectable({
@@ -16,7 +16,10 @@ export class CiudadService {
   }
 
   addCiudad(ciudad: Ciudad): Observable<Ciudad> {
-    return this.http.post<Ciudad>(this.API_URL, ciudad);
+    return this.http.post<Ciudad>(
+      this.API_URL + ciudad.paisId + '/ciudad',
+      ciudad
+    );
   }
 
   editCiudad(ciudad: Ciudad): Observable<Ciudad> {
@@ -25,5 +28,16 @@ export class CiudadService {
 
   deleteCiudad(ciudad: Ciudad): Observable<Ciudad> {
     return this.http.delete<Ciudad>(this.API_URL + ciudad.id);
+  }
+
+  getCiudadById(id: number): Observable<Ciudad> {
+    return this.http.get<Ciudad>(this.API_URL + id + '/ciudad' + id);
+  }
+
+  //Validar que no se repita el nombre del país
+  nombreExiste(valor: string): Observable<boolean> {
+    return this.http
+      .get<Ciudad[]>(this.API_URL)
+      .pipe(map((x) => x.some((ciudad) => ciudad.nombre == valor)));
   }
 }

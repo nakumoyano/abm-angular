@@ -10,35 +10,33 @@
             cada persona se sabe el nombre, apellido, edad, fecha de nacimiento,
             país y ciudad. Cuenta con un formulario en el cual se puede dar de
             alta a una persona, es decir, se puede crear una nueva persona con
-            sus respectivos datos. Cada campo del formulario esta validado para
-            que no existan campos vacios. A su vez, también existe una tabla en
-            la cual se pueden visualizar todas las personas ingresadas con cada
-            uno de sus datos.
+            sus respectivos datos. Cada campo del formulario esta validado usando     |     
+            <strong>ReactiveFormsModule</strong> para
+            que no existan campos vacíos. También se valido que no existan dos países con el mismo nombre.
           </p>
           <p>
             Además del formulario de carga de la persona, existe un formulario
-            para cargar paises y otro para cargar ciudades, y de esa manera,
+            para cargar países y otro para cargar ciudades, y de esa manera,
             tener una mayor variedad de datos.
           </p>
           <p>
             Una vez que ya hemos cargado nuestra persona, país o ciudad, vamos a
             visualizar estos datos en sus respectivas tablas, en la cual,
             existen 2 botones: uno para editar y otro para borrar. El botón de
-            editar, nos permitira modificar una carga realizada de manera
+            editar, nos permitirá modificar una carga realizada de manera
             errónea. Al tocar este botón, nos redirigirá a un formulario donde
-            ya estan los datos cargados, de esa manera solo modificamos el campo
+            ya están los datos cargados, de esa manera solo modificamos el campo
             que este mal cargado. Cuando ya hemos realizado los cambios
-            necesarios, guardamos y automaticamente nos redirigira a la tabla
+            necesarios, guardamos y automaticamente nos redirigirá a la tabla
             para observar que el dato a sido modificado correctamente. Por su
             parte, el botón de borrar, nos eliminara permanentemente a la
-            persona, pais o ciudad que hemos elegio.
+            persona, pais o ciudad que hemos elegido.
           </p>
           <p>
-            Cada vez que realizamos una acción con respecto a un dato, saldra una notificacion emergente
-            diciendonos si se ha realizado con éxito o si a ocurrido algun
-            error al momento de realizar dicha acción. 
+            Cada vez que realizamos una acción con respecto a un dato, saldra una notificación emergente
+            diciendonos si se ha realizado con éxito o si a ocurrido algún
+            error al momento de realizar dicha acción. Esta notificación es posible gracias al uso de <strong>Toastr</strong>.
           </p>
-          <p>Todos los formularios fueron validados utilizando <strong>ReactiveFormsModule</strong>.</p>
 
 ## Tecnologías usadas
 

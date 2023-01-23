@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AgregarCiudadComponent } from './page/ciudad/agregar-ciudad/agregar-ciudad.component';
 import { HeroComponent } from './page/hero/hero.component';
 import { AgregarPaisComponent } from './page/pais/agregar-pais/agregar-pais.component';
 import { ListadoPaisesComponent } from './page/pais/listado-paises/listado-paises.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'alta-pais', component: AgregarPaisComponent },
   { path: 'editar-pais/:id', component: AgregarPaisComponent },
   { path: 'listado-paises', component: ListadoPaisesComponent },
+  { path: 'alta-ciudad', component: AgregarCiudadComponent },
 ];
 
 @NgModule({

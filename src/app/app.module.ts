@@ -45,6 +45,7 @@ import { EliminarPersonaComponent } from './page/persona/eliminar-persona/elimin
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot({
       timeOut: 3000,
+      closeButton: true,
     }), // ToastrModule added
   ],
   providers: [],

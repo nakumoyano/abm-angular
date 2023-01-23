@@ -154,22 +154,6 @@ export class AgregarPersonaComponent implements OnInit {
     );
   }
 
-  //cargamos el combo de ciudad segun el pais que elijamos
-  // cargarCiudadPorPais() {
-  //   this.formulario.controls['paisId'].valueChanges.subscribe((x) => {
-  //     this.subscription.add(
-  //       this.ciudadService.getCiudadPorPais(x).subscribe({
-  //         next: (r: Ciudad[]) => {
-  //           this.ciudades = r;
-  //         },
-  //         error: () => {
-  //           alert('error al cargar combo ciudad');
-  //         },
-  //       })
-  //     );
-  //   });
-  // }
-
   //para las validaciones del formulario
   get controlNombre(): FormControl {
     return this.formulario.controls['nombre'] as FormControl;
