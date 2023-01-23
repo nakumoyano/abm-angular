@@ -10,7 +10,7 @@
             cada persona se sabe el nombre, apellido, edad, fecha de nacimiento,
             país y ciudad. Cuenta con un formulario en el cual se puede dar de
             alta a una persona, es decir, se puede crear una nueva persona con
-            sus respectivos datos. Cada campo del formulario esta validado usando     |     
+            sus respectivos datos. Cada campo del formulario esta validado usando    
             <strong>ReactiveFormsModule</strong> para
             que no existan campos vacíos. También se valido que no existan dos países con el mismo nombre.
           </p>
@@ -49,6 +49,7 @@
 - [![NPM][npm.com]][npm-url]
 - [![GitHub][github.com]][github-url]
 - [![VSCode][vscode.com]][vscode-url]
+  -[![Toastr][toastr.com]]
 
 [angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [angular-url]: https://angular.io/
@@ -68,3 +69,4 @@
 [github.com]: https://img.shields.io/badge/Github-563D7C?style=for-the-badge&logo=github&logoColor=white
 [vscode-url]: https://code.visualstudio.com/
 [vscode.com]: https://img.shields.io/badge/vscode-33C4FF?style=for-the-badge&logo=vscode&logoColor=white
+[toastr.com]: https://misovirtual.virtual.uniandes.edu.co/codelabs/angular-in-memory/index.html?index=..%2F..index#3
