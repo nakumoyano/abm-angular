@@ -48,7 +48,8 @@
 - [![HTML5][html.com]][html-url]
 - [![NPM][npm.com]][npm-url]
 - [![GitHub][github.com]][github-url]
-- [![VSCode][vscode.com]][vscode-url] -[![Toastr][toastr.com]][toastr-url]
+- [![VSCode][vscode.com]][vscode-url]
+- [![Toastr][toastr.com]][toastr-url]
 
 [angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [angular-url]: https://angular.io/
